@@ -6,42 +6,34 @@ function resetGame(){
     canPlay=true;
     document.getElementById("message").textContent=message;
     document.getElementById("button").innerHTML=buttonMessage;
-    startGame();
-}
-
-function startGame(){
-    if(canPlay==true)
         playGame();
-    else
-        endGame();
 }
 function playGame(){
     message="Click the button to DRAW";
-    document.getElementById("message").textContent=message;
     buttonMessage="DRAW";
+    document.getElementById("message").textContent=message; 
     document.getElementById("button").innerHTML=buttonMessage;
     sum+=generateNumber();
     document.getElementById("sum").innerHTML=sum;
     if(sum < 21)
        message="Want to draw one more card ?";
-    else if(sum === 21){
-        message="You have a won";
-        resetGame();
-    }
-    else{
-        canPlay=false;
-        startGame();
-    }
+    else
+        endGame();
 }
 
 function endGame(){
-    message="You have lost the game. Want to play another game";
+    if(sum>21)
+        message="You have lost the game.";
+    else    
+        message="You have WON !!!"
     document.getElementById("message").textContent=message;
+
     buttonMessage="PLAY AGAIN ?";
     document.getElementById("button").innerHTML=buttonMessage;
     sum=0;
-    resetGame();
-}    
+    canPlay=false;
+}   
+
 function generateNumber(){
     return Math.floor(Math.random()*9)+2;
 }
