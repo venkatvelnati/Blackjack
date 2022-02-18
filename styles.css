@@ -11,34 +11,38 @@ h1{
 h1::first-letter{
     color:greenyellow;
 }
-div{
-    font-family: 'Montserrat', sans-serif;
-    font-weight:bold;
-    text-align: center;
-    border-color: greenyellow;
+.gameboard{
     border-radius: 20px;
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 30%;
-    background-color: whitesmoke;
+    text-align: center;
+    align-content: center;
 }
 button{
-    padding: 15px 32px;
+    background-color: whitesmoke;
+    align-self: center;
+    width: 15%;
+    height: 7%;
     border-color: greenyellow;
     border-style:solid;
     font-family: 'Montserrat', sans-serif;
     font-weight:bold;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 button:hover{
     background-color: greenyellow;
 }
 #sum{
     top: 50%;
-    margin-top: 5%;
+    margin-top: 50px;
     text-align: center;
     font-family: 'Anton', sans-serif;
     font-size:60px;
     color:greenyellow;
 }
+
+#message{
+    padding-top: 2%;
+    color: greenyellow;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+}
+
