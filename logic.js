@@ -1,14 +1,27 @@
 let sum=0;
 let canPlay=true;
+
 function resetGame(){
+    
     let message="Click Start Game to Play";
     let buttonMessage="PLAY";
-    canPlay=true;
     document.getElementById("message").textContent=message;
     document.getElementById("button").innerHTML=buttonMessage;
-        playGame();
+    console.log("nice")
+    console.log(document.getElementById("message")); 
+}
+function resetReal() {
+    let message= "Start"
+    let buttonMessage= "PLAY";
+    document.getElementById("message").textContent = message;
+    document.getElementById("button").innerHTML= buttonMessage;
+    playGame();
 }
 function playGame(){
+    if(canPlay==false){
+        canPlay=true;
+        resetReal()
+    }
     message="Click the button to DRAW";
     buttonMessage="DRAW";
     document.getElementById("message").textContent=message; 
@@ -22,7 +35,8 @@ function playGame(){
 }
 
 function endGame(){
-    if(sum>21)
+   
+    if(sum > 21)
         message="You have lost the game.";
     else    
         message="You have WON !!!"
