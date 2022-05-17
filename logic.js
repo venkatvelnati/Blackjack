@@ -11,11 +11,7 @@ function resetGame(){
     console.log(document.getElementById("message")); 
 }
 function resetReal() {
-    let message= "Start"
-    let buttonMessage= "PLAY";
-    document.getElementById("message").textContent = message;
-    document.getElementById("button").innerHTML= buttonMessage;
-    playGame();
+    document.location.reload();
 }
 function playGame(){
     if(canPlay==false){
